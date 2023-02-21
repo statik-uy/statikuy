@@ -367,8 +367,8 @@ a:focus {
 .service_section {
   text-align: center;
   color: #f9fcfb;
-  background-image: url(../images/service-bg.png);
-  background-size: 100% 100%;
+  background-image: url(../images/service-bg.svg);
+  background-size: cover;
   padding-top: 275px;
   padding-bottom: 125px;
   background-repeat: no-repeat;
@@ -430,6 +430,86 @@ a:focus {
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
 }
+
+/* TRABAJOS */
+
+.trabajos_section {
+  text-align: center;
+  /* color: #f9fcfb; */
+  /* background-image: url(../images/service-bg.svg); */
+  background-size: cover;
+  padding-top: 275px;
+  padding-bottom: 125px;
+  background-repeat: no-repeat;
+  margin-top: -150px;
+}
+
+.trabajos_section .trabajos_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.trabajos_section .trabajos_container .trabajos_box {
+  width: 30%;
+  min-width: 300px;
+  margin: 35px 15px;
+}
+
+.trabajos_section .trabajos_container .trabajos_box .img-box {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.trabajos_section .trabajos_container .trabajos_box .img-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trabajos_section .trabajos_container .trabajos_box .detail-box {
+  margin-top: 30px;
+}
+
+.trabajos_section .trabajos_container .trabajos_box .detail-box h4 {
+  font-weight: bold;
+}
+
+.trabajos_section .link {
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #feb543;
+  color: #ffffff;
+  border-radius: 25px;
+  /* -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+  box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26); */
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: none;
+}
+
+.trabajos_section .imagen_proyecto {
+  display: inline-block;
+  padding: 12px 40px;
+  /* color: #f9fcfb; */
+  border-radius: 25px;
+  /* -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+  box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26); */
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: none;
+}
+
+.trabajos_section a:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+/* end TRABAJOS */
 
 .sub_page .service_section {
   margin-top: 00px;
