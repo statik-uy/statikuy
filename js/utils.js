@@ -23,7 +23,7 @@ const showNotification = (message, type = "", callback = () => {}) => {
   toast.show();
 };
 
-const sendMail = async (subject, email, message, successMessage) => {
+const sendMail = async (subject, nombre, message, successMessage) => {
   showNotification("Procesando solicitud.", "loading");
   const cuerpo = generateEmailTemplate(subject, message);
   const res = await fetch(
@@ -36,7 +36,7 @@ const sendMail = async (subject, email, message, successMessage) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        de: '"Formulario de contacto" <contacto@statik.uy>',
+        de: `"${nombre} - Formulario de contacto" <contacto@statik.uy>`,
         asunto: subject,
         mensaje: cuerpo,
         para: ["statikuy@gmail.com"],
