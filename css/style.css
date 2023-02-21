@@ -723,7 +723,7 @@ a:focus {
 
 /* info section */
 .footer_bg {
-  background-image: url(../images/footer-bg.png);
+  background-image: url(../images/footer-bg.svg);
   background-size: cover;
   padding-top: 280px;
   margin-top: -125px;
