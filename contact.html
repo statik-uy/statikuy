@@ -16,6 +16,7 @@
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&amp;display=swap" rel="stylesheet"/>
@@ -23,6 +24,9 @@
   <link href="css/style.css" rel="stylesheet"/>
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet"/>
+  <!-- FONT AWESOME -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
 <body class="sub_page">
@@ -61,7 +65,7 @@
                       <a class="nav-link" href="trabajos.html">Portafolio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contacto</a>
+                      <a class="nav-link" href="contact.html">Contacto <i class="fa-solid fa-rotate-right"></i></a>
                     </li>
                     <!-- <li class="nav-item">
                       <a class="nav-link" href="#"> Login</a>
@@ -91,26 +95,26 @@
       </p>
     </div>
     <div class="container">
-      <form>
+      <form id="formulario-contacto">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputName4">Name</label>
-            <input type="text" class="form-control" id="inputName4"/>
+            <input type="text" name="nombre" class="form-control rounded-lg rounded-lg" id="inputName4" required/>
           </div>
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4"/>
+            <input type="email" name="email" class="form-control rounded-lg" id="inputEmail4" required/>
           </div>
 
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputNumber4">Phone number</label>
-            <input type="tel" class="form-control" id="inputNumber4"/>
+            <input type="tel" name="telefono" class="form-control rounded-lg" id="inputNumber4" required/>
           </div>
           <div class="form-group col-md-6">
             <label for="inputState">Select Service</label>
-            <select id="inputState" class="form-control">
+            <select id="inputState" name="servicio" class="form-control rounded-lg" required>
               <option selected=""></option>
               <option>...</option>
             </select>
@@ -119,17 +123,41 @@
         </div>
         <div class="form-group">
           <label for="inputMessage">Message</label>
-          <input type="text" class="form-control" id="inputMessage" placeholder=""/>
+          <textarea class="form-control rounded-lg h-auto" name="mensaje" id="inputMessage" cols="30" rows="8" required></textarea>
         </div>
     </div>
 
     <div class="d-flex justify-content-center">
-      <button type="submit" class="">Send</button>
+      <button type="submit">Send</button>
     </div>
     </form>
     
   </section>
-
+<!-- Notifications -->
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x mt-5 pt-5 z-3">
+      <!-- <div class="toast-container position-fixed bottom-0 end-0 mt-5"> -->
+        <div id="notification" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body" style="display: flex; justify-content: space-between;">
+                <p id="notification-message" style="margin: 0;"></p>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+      </div>
+    </div>
+      <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+        </div>
+      </div> -->
+      <!-- Notifications End -->
 
   <!-- end contact section -->
   <div class="footer_bg">
@@ -382,4 +410,6 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script type="module" src="js/formularios/contacto.js"></script>
 </body></html>
