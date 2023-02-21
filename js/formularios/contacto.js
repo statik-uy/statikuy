@@ -4,11 +4,11 @@ import { sendMail, showNotification } from "../utils.js";
 const formulario = document.getElementById("formulario-contacto");
 
 const opciones = {
-  1: "Accidente de transito",
-  2: "Derecho de Seguros",
-  3: "Derecho Penal",
-  4: "Derecho Civil",
-  5: "Servicios Notariales",
+  1: "Página Web",
+  2: "Redes Sociales",
+  3: "Publicidad",
+  4: "Página WEB + Redes Sociales + Publicidad",
+  5: "Otro (especifique en mensaje)"
 };
 
 if (formulario) {
@@ -16,7 +16,6 @@ if (formulario) {
     event.preventDefault();
     showNotification("Procesando solicitud");
     const campos = ["nombre", "telefono", "email"];
-    console.log(event.target.mensaje.value);
     let cuerpo = ``;
 
     campos.forEach((campo) => {
@@ -25,13 +24,17 @@ if (formulario) {
       } <br/>`;
     });
 
+    cuerpo += `<strong>${event.target.servicio.name.toUpperCase()}</strong>: ${
+      opciones[event.target.servicio.value]
+    } <br/>`;
+
     cuerpo += `<br/><strong>${event.target.mensaje.name.toUpperCase()}</strong>: ${
       event.target.mensaje.value
     } <br/>`;
 
     sendMail(
       "Solicitud de contacto",
-      event.target.email.value,
+      event.target.nombre.value,
       cuerpo,
       "Su solicitud de contacto fue enviada!"
     );
