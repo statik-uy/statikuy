@@ -644,6 +644,17 @@ a:focus {
   background-image: url(../images/next.png);
 }
 
+.carousel-item{
+  height: 400px;
+}
+
+@media (max-width: 576px) {
+  /* Solo se aplicarán entre los tamaños indicados */
+  .carousel-item{
+    height: 500px;
+  }
+}
+
 .client_container {
   width: 55%;
   margin: 0 auto;
